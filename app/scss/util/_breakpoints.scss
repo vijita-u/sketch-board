@@ -1,0 +1,29 @@
+// Sass map
+
+// 640px, 1024px, 1113px, 1400px
+$breakpoints-up: (
+    "medium": 40em,
+    "large": 64em,
+    "midlarge": 69.5625em,
+	"xlarge": 87.5em,
+);
+
+// 639.98px, 1023.98px, 1399.98px
+$breakpoints-down: (
+	"small": 39.9988em,
+	"medium": 63.9988em,
+	"large": 87.4988em,
+);
+
+// Create mixins
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    };
+};
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    };
+};

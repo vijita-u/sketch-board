@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background-color: var(--header);
+  height: 50px;
+  width: 100vw;
+  padding: 30px 30px;
+  border-bottom: 0.7px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header__logo img {
+  height: 100%;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__tools {
+  flex: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header__tools .icon {
+  cursor: pointer;
+  position: relative;
+}
+.header__tools .icon__container {
+  position: absolute;
+  content: "";
+  bottom: -80px;
+  right: -30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--header);
+  padding: 10px 5px 5px 5px;
+  display: none;
+}
+.header__tools .icon__container2 {
+  position: absolute;
+  content: "";
+  bottom: -50px;
+  right: -30px;
+  background-color: var(--header);
+  padding: 10px 5px 5px 5px;
+  display: none;
+}
+.header__tools .icon__range {
+  width: 70px;
+  height: 5px;
+  accent-color: black;
+  cursor: pointer;
+}
+.header__tools .icon__colors {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.header__tools .icon__colors.black {
+  background-color: black;
+}
+.header__tools .icon__colors.blue {
+  background-color: blue;
+}
+.header__tools .icon__colors.red {
+  background-color: red;
+}
+.header__tools .icon__colors-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:root {
+  --header: hsl(233, 26%, 24%)
+  --white: hsl(0, 0%, 100%);
+  --font-small: 0.875rem;
+  --font-medium: 1.125rem;
+}/*# sourceMappingURL=style.css.map */
