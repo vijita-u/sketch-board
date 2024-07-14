@@ -25,7 +25,7 @@
         <i class="icon header__tools-draw fa-solid fa-pencil fa-lg"
           ><div class="icon__container">
             <input
-              class="icon__range"
+              class="icon__range draw-width"
               type="range"
               name="pencilWidth"
               id="pencilWidth"
@@ -42,13 +42,13 @@
         <i class="icon header__tools-erase fa-solid fa-eraser fa-lg">
           <div class="icon__container2">
             <input
-              class="icon__range"
+              class="icon__range erase-width"
               type="range"
               name="pencilWidth"
               id="pencilWidth"
               min="0"
-              max="10"
-              value="2"
+              max="30"
+              value="3"
             />
           </div>
         </i>
@@ -59,6 +59,8 @@
         <i class="icon header__tools-undo fa-solid fa-rotate-left fa-lg"></i>
       </div>
     </header>
+    <canvas></canvas>
     <script src="app/js/script.js"></script>
+    <script src="app/js/canvas.js"></script>
   </body>
 </html>
