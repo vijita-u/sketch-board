@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="app/scss/style.css" />
+    <title>Sketch Board</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img
+          src="app/assets/images/sketchboardlogo.png"
+          alt="sketch board logo"
+        />
+      </div>
+      <div class="header__tools">
+        <i class="icon header__tools-draw fa-solid fa-pencil fa-lg"
+          ><div class="icon__container">
+            <input
+              class="icon__range draw-width"
+              type="range"
+              name="pencilWidth"
+              id="pencilWidth"
+              min="0"
+              max="10"
+              value="2"
+            />
+            <div class="icon__colors-container">
+              <div class="icon__colors black"></div>
+              <div class="icon__colors blue"></div>
+              <div class="icon__colors red"></div>
+            </div></div
+        ></i>
+        <i class="icon header__tools-erase fa-solid fa-eraser fa-lg">
+          <div class="icon__container2">
+            <input
+              class="icon__range erase-width"
+              type="range"
+              name="pencilWidth"
+              id="pencilWidth"
+              min="0"
+              max="30"
+              value="3"
+            />
+          </div>
+        </i>
+        <i class="icon header__tools-download fa-solid fa-download fa-lg"></i>
+        <i class="icon header__tools-upload fa-solid fa-upload fa-lg"></i>
+        <i class="icon header__tools-note fa-solid fa-note-sticky fa-lg"></i>
+        <i class="icon header__tools-redo fa-solid fa-rotate-right fa-lg"></i>
+        <i class="icon header__tools-undo fa-solid fa-rotate-left fa-lg"></i>
+      </div>
+    </header>
+    <canvas></canvas>
+    <script
+      src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+      integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script>
+      let socket = io.connect("http://127.0.0.1:3000/");
+    </script> -->
+    <script src="app/js/script.js"></script>
+    <script src="app/js/canvas.js"></script>
+  </body>
+</html>
