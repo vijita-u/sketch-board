@@ -1,4 +1,4 @@
-let socket = io.connect("http://127.0.0.1:3000/");
+let socket = io.connect("https://sketch-board-9djl.onrender.com/");
 
 const canvas = document.querySelector("canvas");
 canvas.width = window.innerWidth;

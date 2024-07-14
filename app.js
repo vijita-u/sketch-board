@@ -20,8 +20,9 @@ let io = socket(server);
 io.on("connection", (socket) => {
     console.log("Websocket connected");
 
+
+    // Transfer received data to all computers including our computer
     socket.on("beginPath", (data) => {
-        // Transfer received data to all computers
         io.sockets.emit("beginPath", data);
     });
 
